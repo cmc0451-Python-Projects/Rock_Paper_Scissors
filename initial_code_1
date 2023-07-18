@@ -1,0 +1,113 @@
+rock = '''
+    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)
+'''
+
+paper = '''
+    _______
+---'   ____)____
+          ______)
+          _______)
+         _______)
+---.__________)
+'''
+
+scissors = '''
+    _______
+---'   ____)____
+          ______)
+       __________)
+      (____)
+---.__(___)
+'''
+
+#Write your code below this line 👇
+
+
+
+choice = int(input("choose 0 for rock, 1 for Scissors, 2 for paper "))
+
+print("\n Your choice: \n ")
+
+rock_int = 0
+paper_int = 2
+scissors_int = 1
+
+
+if choice == 0:
+  print(rock)
+
+elif choice == 1:
+  print(scissors)
+
+elif choice == 2:
+  print(paper)
+
+comp_choices = [1, 2, 0]
+
+import random
+
+comp_choice = comp_choices[random.randint(0,2)]
+
+print(" ")
+print("computer chose: ")
+
+if comp_choice == 0:
+  print(rock)
+
+elif comp_choice == 1:
+  print(scissors)
+
+elif comp_choice == 2:
+  print(paper)
+
+tie = ("\nYou Tied!")
+won = ("\nYou won!")
+loss = ("\nYou Loss!")
+
+if choice == comp_choice:
+  print(tie)
+
+elif choice == 0 and comp_choice == 2:
+  print(loss)
+
+elif choice == 0 and comp_choice == 1:
+  print(won)
+
+elif choice == 2 and comp_choice == 0:
+  print(won)
+
+elif choice == 2 and comp_choice == 1:
+  print(loss)
+
+elif choice == 1 and comp_choice == 0:
+  print(loss)
+
+elif choice == 1 and comp_choice == 2:
+  print(won)
+
+
+#I was looking for possible combinations and I repeated certain choices I left this code here in case of future use. 
+
+
+#elif comp_choice == 0 and choice == 2:
+  #print(won)
+  
+#elif comp_choice == 0 and choice == 1:
+  #print(loss)
+
+#elif comp_choice == 2 and choice == 0:
+  #print(loss)
+
+#elif comp_choice == 2 and choice == 1:
+  #print(won)
+
+#elif comp_choice == 1 and choice == 0:
+  #print(won)
+
+#elif comp_choice == 1 and choice == 2:
+  #print(loss)
